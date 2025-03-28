@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Wagyingo Hostels</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Hostel Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wagyingo-main.html">Wagyingo Main</a></li>
+            <li><a href="wagyingo-onyx.html">Wagyingo Onyx</a></li>
+            <li><a href="wagyingo-opal.html">Wagyingo Opal</a></li>
+            <li><a href="login.html" class="login-link">Login</a></li>
+            <li><a href="#" class="logout-link" id="logout" style="display: none;">Logout</a></li>
+            <li><a href="confirmation.html" class="view-booking-link" style="display: none;">View Booking Slip</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-form">
+        <h2>Login to Your Account</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="cta-button">Login</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Wagyingo Hostels. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html#privacy">Privacy Policy</a>
+            <a href="index.html#terms">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

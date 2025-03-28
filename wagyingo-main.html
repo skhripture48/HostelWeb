@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wagyingo Main Hostel - Search Rooms</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Hostel Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wagyingo-main.html">Wagyingo Main</a></li>
+            <li><a href="wagyingo-onyx.html">Wagyingo Onyx</a></li>
+            <li><a href="wagyingo-opal.html">Wagyingo Opal</a></li>
+            <li><a href="login.html" class="login-link">Login</a></li>
+            <li><a href="#" class="logout-link" id="logout" style="display: none;">Logout</a></li>
+            <li><a href="confirmation.html" class="view-booking-link" style="display: none;">View Booking Slip</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('https://blog.getrooms.co/wp-content/uploads/2019/04/wagyingo-hostel-3.jpg');">
+        <div class="hero-content">
+            <h1>Search Rooms at Wagyingo Main Hostel</h1>
+            <p>Find the perfect room for your stay near KNUST.</p>
+        </div>
+    </section>
+
+    <!-- Room Search Section -->
+    <section class="room-search">
+        <h2>Search for Available Rooms</h2>
+        <form id="search-form-main">
+            <div class="form-group">
+                <label for="room-type">Room Type</label>
+                <select id="room-type" name="room-type" required>
+                    <option value="">Select Room Type</option>
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="triple">Triple Room</option>
+                    <option value="quad">Quad Room</option>
+                </select>
+            </div>
+            <button type="button" class="cta-button search-rooms">Search Rooms</button>
+        </form>
+
+        <!-- Available Rooms Section -->
+        <div id="available-rooms-main" style="display: none;">
+            <h3>Available Rooms</h3>
+            <ul id="room-list-main"></ul>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Stay at Wagyingo Main Hostel?</h2>
+        <div class="feature-container">
+            <div class="feature-box">
+                <i class="fas fa-bed"></i>
+                <h3>Spacious Rooms</h3>
+                <p>Modern and comfortable rooms designed for students.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-wifi"></i>
+                <h3>High-Speed WiFi</h3>
+                <p>Stay connected with fast internet access.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Prime Location</h3>
+                <p>Located just minutes from KNUST campus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Wagyingo Hostels. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html#privacy">Privacy Policy</a>
+            <a href="index.html#terms">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

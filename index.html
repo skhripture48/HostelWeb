@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hostel Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Hostel Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wagyingo-main.html">Wagyingo Main</a></li>
+            <li><a href="wagyingo-onyx.html">Wagyingo Onyx</a></li>
+            <li><a href="wagyingo-opal.html">Wagyingo Opal</a></li>
+            <li><a href="login.html" class="login-link">Login</a></li>
+            <li><a href="#" class="logout-link" id="logout" style="display: none;">Logout</a></li>
+            <li><a href="confirmation.html" class="view-booking-link" style="display: none;">View Booking Slip</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slideshow">
+            <!-- Slides will be added dynamically via JavaScript -->
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to Wagyingo Hostels</h1>
+            <p>Book affordable, comfortable rooms near KNUST.</p>
+            <a href="login.html"><button class="cta-button">Login</button></a>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Enter specific hostel" aria-label="Search for a hostel">
+                <button class="search-button"><i class="fas fa-search"></i> Search</button>
+                <!-- Dropdown for hostel options (hidden by default) -->
+                <div class="hostel-dropdown" id="hostel-dropdown" role="listbox" aria-label="Hostel options">
+                    <div class="hostel-option" data-value="wagyingo-main" role="option" tabindex="0">Wagyingo Main Hostel</div>
+                    <div class="hostel-option" data-value="wagyingo-onyx" role="option" tabindex="0">Wagyingo Onyx Hostel</div>
+                    <div class="hostel-option" data-value="wagyingo-opal" role="option" tabindex="0">Wagyingo Opal Hostel</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="hostels">
+        <h2>Our Amenities</h2>
+        <div class="feature-container">
+            <div class="feature-box">
+                <i class="fas fa-bed"></i>
+                <h3>Comfy Rooms</h3>
+                <p>Spacious and modern rooms designed for students.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-wifi"></i>
+                <h3>WiFi</h3>
+                <p>Stay connected with fast internet access.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Prime Locations</h3>
+                <p>Hostels near University Campus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>© 2025 Wagyingo Hostels. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

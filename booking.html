@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Room - Wagyingo Hostels</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Hostel Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wagyingo-main.html">Wagyingo Main</a></li>
+            <li><a href="wagyingo-onyx.html">Wagyingo Onyx</a></li>
+            <li><a href="wagyingo-opal.html">Wagyingo Opal</a></li>
+            <li><a href="login.html" class="login-link">Login</a></li>
+            <li><a href="#" class="logout-link" id="logout" style="display: none;">Logout</a></li>
+            <li><a href="confirmation.html" class="view-booking-link" style="display: none;">View Booking Slip</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form-section">
+        <h2>Book Your Room</h2>
+        <div class="room-details">
+            <h3>Selected Room</h3>
+            <p><strong>Hostel:</strong> <span id="hostel-name"></span></p>
+            <p><strong>Room ID:</strong> <span id="room-id"></span></p>
+            <p><strong>Room Type:</strong> <span id="room-type"></span></p>
+            <p><strong>Price:</strong> <span id="room-price"></span> per night</p>
+        </div>
+        <form id="booking-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="full-name">Name</label>
+                    <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="academic-level">Academic Level</label>
+                    <select id="academic-level" name="academic-level" required>
+                        <option value="">Select Academic Level</option>
+                        <option value="level 100">Level 100</option>
+                        <option value="level 200">Level 200</option>
+                        <option value="level 300">Level 300</option>
+                        <option value="level 400">Level 400</option>
+                        <option value="level 500">Level 500</option>
+                        <option value="level 600">Level 600</option>
+                        <option value="service personnel">Service Personnel</option>
+                        <option value="masters student">Masters Student</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="program">Program of Study</label>
+                    <input type="text" id="program" name="program" placeholder="e.g., Computer Science" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., +233 123 456 789" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" placeholder="e.g., Ghanaian" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="guardian-name">Guardian Name</label>
+                    <input type="text" id="guardian-name" name="guardian-name" placeholder="Enter guardian's name" required>
+                </div>
+                <div class="form-group">
+                    <label for="relationship">Relationship with Guardian</label>
+                    <input type="text" id="relationship" name="relationship" placeholder="e.g., Parent" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="guardian-phone">Guardian Phone Number</label>
+                    <input type="tel" id="guardian-phone" name="guardian-phone" placeholder="e.g., +233 987 654 321" required>
+                </div>
+            </div>
+            <button type="submit" class="cta-button">Confirm Booking</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Wagyingo Hostels. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html#privacy">Privacy Policy</a>
+            <a href="index.html#terms">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

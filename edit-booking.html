@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Booking - Wagyingo Hostels</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Hostel Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wagyingo-main.html">Wagyingo Main</a></li>
+            <li><a href="wagyingo-onyx.html">Wagyingo Onyx</a></li>
+            <li><a href="wagyingo-opal.html">Wagyingo Opal</a></li>
+            <li><a href="login.html" class="login-link">Login</a></li>
+            <li><a href="#" class="logout-link" id="logout" style="display: none;">Logout</a></li>
+            <li><a href="confirmation.html" class="view-booking-link" style="display: none;">View Booking Slip</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Edit Booking Form -->
+    <section class="booking-form">
+        <h1>Edit Booking Details</h1>
+        <div class="room-details">
+            <h2>Room Details (Non-Editable)</h2>
+            <p>Hostel: <span id="hostel-name"></span></p>
+            <p>Room ID: <span id="room-id"></span></p>
+            <p>Room Type: <span id="room-type"></span></p>
+            <p>Price: <span id="room-price"></span></p>
+        </div>
+        <form id="edit-booking-form">
+            <h2>Personal Details</h2>
+            <label for="full-name">Name:</label>
+            <input type="text" id="full-name" name="full-name" required>
+
+            <label for="academic-level">Academic Level:</label>
+            <select id="academic-level" name="academic-level" required>
+                <option value="level 100">Level 100</option>
+                <option value="level 200">Level 200</option>
+                <option value="level 300">Level 300</option>
+                <option value="level 400">Level 400</option>
+                <option value="masters student">Masters Student</option>
+                <option value="service personnel">Service Personnel</option>
+            </select>
+
+            <label for="program">Program of Study:</label>
+            <input type="text" id="program" name="program" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="nationality">Nationality:</label>
+            <input type="text" id="nationality" name="nationality" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <h2>Guardian Details</h2>
+            <label for="guardian-name">Guardian Name:</label>
+            <input type="text" id="guardian-name" name="guardian-name" required>
+
+            <label for="relationship">Relationship with Guardian:</label>
+            <input type="text" id="relationship" name="relationship" required>
+
+            <label for="guardian-phone">Guardian Phone Number:</label>
+            <input type="tel" id="guardian-phone" name="guardian-phone" required>
+
+            <button type="submit" class="cta-button">Save Changes</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Wagyingo Hostels. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#terms">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

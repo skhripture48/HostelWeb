@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - Wagyingo Hostels</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- jsPDF and autoTable for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Hostel Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wagyingo-main.html">Wagyingo Main</a></li>
+            <li><a href="wagyingo-onyx.html">Wagyingo Onyx</a></li>
+            <li><a href="wagyingo-opal.html">Wagyingo Opal</a></li>
+            <li><a href="login.html" class="login-link">Login</a></li>
+            <li><a href="#" class="logout-link" id="logout" style="display: none;">Logout</a></li>
+            <li><a href="confirmation.html" class="view-booking-link" style="display: none;">View Booking Slip</a></li>
+        </ul>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Confirmation Section -->
+    <section class="confirmation-section">
+        <h2>Booking Confirmation</h2>
+        <div class="confirmation-details" id="confirmation-details">
+            <h3>Your Booking Details</h3>
+            <p><strong>Hostel:</strong> <span id="hostel-name"></span></p>
+            <p><strong>Room ID:</strong> <span id="room-id"></span></p>
+            <p><strong>Room Type:</strong> <span id="room-type"></span></p>
+            <p><strong>Price:</strong> <span id="room-price"></span> per night</p>
+            <p><strong>Name:</strong> <span id="full-name"></span></p>
+            <p><strong>Academic Level:</strong> <span id="academic-level"></span></p>
+            <p><strong>Program of Study:</strong> <span id="program"></span></p>
+            <p><strong>Phone Number:</strong> <span id="phone"></span></p>
+            <p><strong>Nationality:</strong> <span id="nationality"></span></p>
+            <p><strong>Gender:</strong> <span id="gender"></span></p>
+            <p><strong>Guardian Name:</strong> <span id="guardian-name"></span></p>
+            <p><strong>Relationship with Guardian:</strong> <span id="relationship"></span></p>
+            <p><strong>Guardian Phone Number:</strong> <span id="guardian-phone"></span></p>
+        </div>
+        <button class="cta-button" id="print-pdf">Print PDF</button>
+        <button class="cta-button" id="edit-booking" style="margin-left: 20px;">Edit Booking</button> <!-- Added Edit Booking button -->
+        <a href="index.html" class="cta-button" style="margin-left: 20px;">Back to Home</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Wagyingo Hostels. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="index.html#privacy">Privacy Policy</a>
+            <a href="index.html#terms">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
