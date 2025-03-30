@@ -13,7 +13,7 @@ router.get('/available', async (req, res) => {
         const rooms = await Room.findAll({
             where: {
                 hostel,
-                roomType,
+                type: roomType,
                 booked: false,
             },
         });
@@ -31,7 +31,7 @@ router.post('/book', async (req, res) => {
         const {
             roomId,
             hostel,
-            bookedByName, // Changed from fullName to bookedByName
+            bookedByName,
             academicLevel,
             program,
             phone,
@@ -42,7 +42,6 @@ router.post('/book', async (req, res) => {
             guardianPhone,
         } = req.body;
 
-        // Updated validation to check for bookedByName instead of fullName
         if (!roomId || !hostel || !bookedByName || !academicLevel || !program || !phone || !nationality || !gender || !guardianName || !relationship || !guardianPhone) {
             return res.status(400).json({ error: 'All fields are required' });
         }
@@ -62,7 +61,7 @@ router.post('/book', async (req, res) => {
         // Update the room with booking details
         await room.update({
             booked: true,
-            bookedByName, // This field already matches the Room model
+            bookedByName,
             academicLevel,
             program,
             phone,
@@ -76,6 +75,54 @@ router.post('/book', async (req, res) => {
         res.json({ message: 'Room booked successfully' });
     } catch (err) {
         console.error('Error booking room:', err);
+        res.status(500).json({ error: 'Server error' });
+    }
+});
+
+// Cancel a booking
+router.post('/cancel', async (req, res) => {
+    try {
+        const { roomId, hostel } = req.body;
+
+        // Validate request body
+        if (!roomId || !hostel) {
+            return res.status(400).json({ error: 'Room ID and hostel are required' });
+        }
+
+        // Find the room
+        const room = await Room.findOne({
+            where: {
+                roomId,
+                hostel,
+            },
+        });
+
+        if (!room) {
+            return res.status(404).json({ error: 'Room not found' });
+        }
+
+        if (!room.booked) {
+            return res.status(400).json({ error: 'Room is not currently booked' });
+        }
+
+        // Clear the booking details and mark the room as available
+        await room.update({
+            booked: false,
+            bookedByName: null,
+            bookedByEmail: null,
+            academicLevel: null,
+            program: null,
+            phone: null,
+            nationality: null,
+            gender: null,
+            guardianName: null,
+            relationship: null,
+            guardianPhone: null,
+        });
+
+        res.json({ message: 'Booking canceled successfully' });
+    } catch (err) {
+        console.error('Error canceling booking:', err);
         res.status(500).json({ error: 'Server error' });
     }
 });

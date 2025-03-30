@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 
 // Update a booking (using the Room model)
 app.put('/api/bookings/update', async (req, res) => {
-    const { hostel, roomId, fullName, academicLevel, program, phone, nationality, gender, guardianName, relationship, guardianPhone } = req.body;
+    const { hostel, roomId, bookedByName, academicLevel, program, phone, nationality, gender, guardianName, relationship, guardianPhone } = req.body;
 
     try {
         // Find the room by hostel and roomId
@@ -51,7 +51,7 @@ app.put('/api/bookings/update', async (req, res) => {
 
         // Update the room with new booking details
         await room.update({
-            bookedByName: fullName,
+            bookedByName,
             academicLevel,
             program,
             phone,
